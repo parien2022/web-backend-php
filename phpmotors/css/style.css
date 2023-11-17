@@ -1,0 +1,478 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Jost:ital@1&family=Varela+Round&display=swap');
+
+html{
+    box-sizing: border-box;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: 'Varela Round', 'Sarabun', sans-serif;
+    margin: 0;
+}
+
+#main-background{
+    display: none;
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    margin: 1rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 3px solid #3a3a3a;
+}
+
+.mainClass{
+    padding: .5rem;
+}
+
+.logo-div{
+    text-align: center;
+}
+#logo{
+    max-width: 100%;
+}
+
+.my-account{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+.my-account-button{
+    padding: 8px;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 8px;
+    background-color: #1B4D79;
+    color: #ffffff;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.navMenu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: .5rem;
+    background-color: #3a3a3a;
+    color: #ffffff;
+    height: 3rem;
+}
+
+.navButton{
+    font-size: 1.5rem;
+    background-color: #1B4D79;
+    color: #ffffff;
+    border-radius: 0.5rem;
+    border: none;
+    height: 2.3rem;
+    cursor: pointer;
+}
+
+.nav-ul.responsive{
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-ul{
+    display: none;
+    padding: 5px;
+    background-color: #3a3a3a;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.nav-ul li{
+    list-style-type: none;
+    padding: 15px;
+}
+
+.nav-ul li:hover{
+    background-color: #1B4D79;
+}
+
+.nav-ul a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.title{
+    font-size: 25px;
+    text-align: center;
+}
+
+.car-div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+#car{
+    margin: 30px 0 30px 0;
+    max-width: 50%;
+}
+
+.car-details{
+    margin-top: 30px;
+    color: #1B4D79;
+}
+
+.own-today-div{
+    text-align: center;
+}
+
+#own-today{
+    max-width: 70%;
+    border-radius: 10px;
+    border: none;
+}
+
+
+.reviews-ul{
+    line-height: 35px;
+}
+
+
+.upgrades{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 0.5fr 1fr 0.5fr;
+    gap: 10px;
+}
+
+.upgrades-title{
+    grid-row: 1/2;
+    grid-column: 1/3;
+}
+.img-1-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: 2/3;
+    grid-column: 1/2;
+    background-color: #4c96d7;
+    border-radius: 10px;
+}
+
+#flux-text{
+    grid-row: 3/4;
+    grid-column: 1/2;
+    text-align: center;
+}
+
+.img-2-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: 2/3;
+    grid-column: 2/3;
+    background-color: #4c96d7;
+    border-radius: 10px;
+}
+
+#flame-text{
+    grid-row: 3/4;
+    grid-column: 2/3;
+    text-align: center;
+}
+
+.img-3-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: 4/5;
+    grid-column: 1/2;
+    background-color: #4c96d7;
+    border-radius: 10px;
+}
+
+#bumper-text{
+    grid-row: 5/6;
+    grid-column: 1/2;
+    text-align: center;
+}
+
+.img-4-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: 4/5;
+    grid-column: 2/3;
+    background-color: #4c96d7;
+    border-radius: 10px;
+}
+
+#hub-text{
+    grid-row: 5/6;
+    grid-column: 2/3;
+    text-align: center;
+}
+
+
+footer{
+    text-align: center;
+}
+
+legend{
+    color: #1E5585;
+    margin: 0 1rem;
+    padding: 0 .5rem;
+}
+
+.formLabel{
+    display: block;
+    font-size: 1rem;
+    color:#3a3a3a;
+    margin: .5rem 0 .5rem 1rem;
+}
+
+form input, form textarea{
+    display: block;
+    font-size: 1rem;
+    border: 1px solid #3a3a3a;
+    border-radius: 5px;
+    padding: .75rem;
+    color: #3a3a3a;
+    width: 85%;
+    max-width: 20rem;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.formButton{
+    padding: 0.5rem;
+    background-color: #1B4D79;
+    color: #ffffff;
+    border-radius: 8px;
+    border: 2px solid #3a3a3a;
+    margin: 1rem 0 1rem 1rem;
+    width: 80%;
+    max-width: 20rem;
+}
+
+.selectOptions{
+    margin: .5rem 0 .5rem 1rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-color: #1B4D79;
+    color: #ffffff;
+}
+
+.condition{
+    font-size: .9rem;
+}
+
+.errMessage{
+    color: red;
+}
+.sucMessage{
+    color: green;
+}
+
+input:required:invalid, input:focus:invalid, textarea:required:invalid{
+    border-left: 6px solid red;
+}
+
+input:required:valid, textarea:required:valid{
+    border-left: 6px solid green;
+}
+
+.invDisplay{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.invDisplay li{
+    margin-bottom: .5em;
+    border: 1px #ccc solid;
+    border-radius: 8px;
+    list-style-type: none;
+    flex: 1 1 auto;
+    padding: 2px;
+}
+
+.invDisplay li img{
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.invDisplayDetails{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1 50px 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.invDisplayDetails img{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.invDisplayDetails .detailsPrice{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.invDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 0;
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.invDetails p:nth-of-type(1), .invDetails p:nth-of-type(3){
+    padding: 15px;
+    background-color: rgb(220, 214, 214);
+    border-radius: 8px;
+}
+
+
+@media only screen and (min-width: 768px) {
+    #main-background{
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 90rem;
+    }
+
+    .container {
+        width: 97%;
+    }
+
+    .mainClass{
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    header{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .navMenu{
+        display: none;
+    }
+
+    .nav-ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #car{
+        position: relative;
+        max-width: 80%;
+    }
+
+    .title{
+        font-size: 40px;
+    }
+
+    .car-div{
+        flex-wrap: unset;
+    }
+
+    .wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-row: 1fr;
+        gap: 30px;
+        padding: 2rem;
+    }
+
+    .upgrades{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    .reviews{
+        grid-column: 2/3;
+        grid-row: 1/2;
+        margin-left: 10rem;
+    }
+
+    .reviews-ul{
+        line-height: 50px;
+    }
+
+    .invDisplay{
+        flex-flow: row wrap;
+        justify-content: flex-start;
+    }
+
+    .invDisplay h2{
+        font-size: 1rem;
+    }
+
+    .invDisplay li{
+        max-width: 200px;
+        flex: 1 0 auto;
+        text-align: center;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .invDisplay div{
+        width: 100%;
+    }
+
+    .invDisplayDetails{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr auto;
+    }
+    
+    .invDisplayDetails img{
+        grid-row: 1/2;
+        border-radius: 10px;
+    }
+    
+    .invDisplayDetails .detailsPrice{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    
+    .invDetails {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        padding-left: 2em;
+    }
+    
+
+    @media only screen and (min-width: 1200px) {
+        .container {
+            width: 98%;
+        }
+
+        .invDisplayDetails{
+            align-items: normal;
+        }
+    }
+    
+
+
+}
