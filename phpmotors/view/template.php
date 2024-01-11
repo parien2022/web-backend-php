@@ -13,7 +13,6 @@
                 <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/phpmotors/snippets/header.php'; ?> 
             </header>
             <nav>
-                <!--<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/phpmotors/snippets/navigation.php'; ?> -->
                 <?php echo $navList; ?>
             </nav>
             <main class="mainClass">

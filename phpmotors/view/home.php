@@ -25,7 +25,7 @@
                             <img id="own-today" src="images/site/own_today.png" alt="own today">
                         </div>
                     </div>
-                    <img id="car" src="images/delorean.jpg" alt="car">
+                    <img id="car" src="/phpmotors/images/vehicles/1982-dmc-delorean.jpg" alt="car">
                     
                 </div>
 

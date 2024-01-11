@@ -13,13 +13,12 @@ require_once '../model/main-model.php';
 require_once '../model/vehicles-model.php';
 //Get common functions
 require_once '../library/functions.php';
+//Get upload thumbnail images from upload-model
+require_once '../model/uploads-model.php';
 
 
 //Get the array of classifications
 $classifications = getClassifications();
-
-// var_dump($classifications);
-//    exit;
 
 //Get a dynamic navigation list
 $navList = buildNavigation($classifications);
@@ -109,7 +108,7 @@ switch($action){
 
     case 'mod':
 
-        $invId = filter_input(INPUT_GET, 'invId', FILTER_VALIDATE_INT);
+        $invId = filter_input(INPUT_GET, 'invId', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
         $invInfo = getInvItemInfo($invId);
 
@@ -133,7 +132,7 @@ switch($action){
         $invStock = filter_input(INPUT_POST, 'invStock', FILTER_SANITIZE_NUMBER_INT);
         $invColor = filter_input(INPUT_POST, 'invColor', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         $classificationId = filter_input(INPUT_POST, 'classificationId', FILTER_SANITIZE_NUMBER_INT);
-        $invId = filter_input(INPUT_POST, 'invId', FILTER_SANITIZE_NUMBER_INT);
+        $invId = filter_input(INPUT_POST, 'invId', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
         if(empty($invMake) || empty($invModel) || empty($invDescription) || empty($invImage) || empty($invThumbnail) || empty($invPrice) || empty($invStock) || empty($invColor) || empty($classificationId)){
             $message = "<p>Please complete all information for the updated vehicle! Double check the classification of the item.</p>";
@@ -158,7 +157,7 @@ switch($action){
 
     case 'del':
         
-        $invId = filter_input(INPUT_GET, 'invId', FILTER_SANITIZE_NUMBER_INT);
+        $invId = filter_input(INPUT_GET, 'invId', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
         $invInfo = getInvItemInfo($invId);
 
@@ -175,7 +174,7 @@ switch($action){
         
         $invMake = filter_input(INPUT_POST, 'invMake', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         $invModel = filter_input(INPUT_POST, 'invModel', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-        $invId = filter_input(INPUT_POST, 'invId', FILTER_SANITIZE_NUMBER_INT);
+        $invId = filter_input(INPUT_POST, 'invId', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         
         $deleteResult = deleteVehicle($invId);
 
@@ -211,16 +210,17 @@ switch($action){
     
     case 'vehicleDetails':
 
-        $invId = filter_input(INPUT_GET, 'invId', FILTER_SANITIZE_NUMBER_INT);
+        $invId = filter_input(INPUT_GET, 'invId', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
-        $vehicleDetails = getInvItemInfo($invId);
+        $vehicleDetails = getInvItemInfoDetails($invId);
+        $vehiclesTnimages = getTnImagesDetail($invId);
 
         if(!count($vehicleDetails)){
             $message = "<p class='errMessage'>Sorry, the vehicle could not be found</p>";
             include '../view/classification.php';
             exit;
         }else{
-            $displayVehiclesDetails = buildVehiclesDetails($vehicleDetails);
+            $displayVehiclesDetails = buildVehiclesDetails($vehicleDetails, $vehiclesTnimages);
         }
 
         include '../view/vehicle-detail.php';

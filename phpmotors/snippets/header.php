@@ -9,4 +9,5 @@
     }else{
         echo "<a class='my-account' href='/phpmotors/accounts/index.php?action=login'><button class='my-account-button'>My Account</button></a>";
     }?>
+    <a class="searchLink" href="/phpmotors/search/" title="search vehicles">&#x1F50D;</a>
 </div>

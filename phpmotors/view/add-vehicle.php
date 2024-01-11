@@ -57,8 +57,6 @@ $classificationList .= "</select>";
                     <?php if(isset($invThumbnail)){echo "value='$invThumbnail'";}else{echo "value='/images/no-image.png'";}?> required></label>
                     <label for="invPrice" class="formLabel">Price<input id="invPrice" type="number" name="invPrice" step="0.01" pattern="\d+(\.\d{1,2})?"
                     <?php if(isset($invPrice)){echo "value='$invPrice'";}?> required></label>
-                    <label for="invStock" class="formLabel"># In Stock<input id="invStock" type="number" name="invStock"
-                    <?php if(isset($invStock)){echo "value='$invStock'";}?> required></label>
                     <label for="invColor" class="formLabel">Color<input id="invColor" type="text" name="invColor"
                     <?php if(isset($invColor)){echo "value='$invColor'";}?> required></label>
                     <input class="formButton" type="submit" name="addVehicleButton" value="Add Vehicle">

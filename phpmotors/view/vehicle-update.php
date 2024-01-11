@@ -62,10 +62,8 @@ $classificationList .= "</select>";
                     <?php if(isset($invImage)){echo "value='$invImage'";}elseif(isset($invInfo['invImage'])){echo "value='$invInfo[invImage]'";}?> required></label>
                     <label for="invThumbnail" class="formLabel">Thumbnail Path<input id="invThumbnail" type="text" name="invThumbnail"
                     <?php if(isset($invThumbnail)){echo "value='$invThumbnail'";}elseif(isset($invInfo['invThumbnail'])){echo "value='$invInfo[invThumbnail]'";}?> required></label>
-                    <label for="invPrice" class="formLabel">Price<input id="invPrice" type="number" name="invPrice"
+                    <label for="invPrice" class="formLabel">Price<input id="invPrice" type="number" name="invPrice" step="0.01" pattern="\d+(\.\d{1,2})?"
                     <?php if(isset($invPrice)){echo "value='$invPrice'";}elseif(isset($invInfo['invPrice'])){echo "value='$invInfo[invPrice]'";}?> required></label>
-                    <label for="invStock" class="formLabel"># In Stock<input id="invStock" type="number" name="invStock"
-                    <?php if(isset($invStock)){echo "value='$invStock'";}elseif(isset($invInfo['invStock'])){echo "value='$invInfo[invStock]'";}?> required></label>
                     <label for="invColor" class="formLabel">Color<input id="invColor" type="text" name="invColor"
                     <?php if(isset($invColor)){echo "value='$invColor'";}elseif(isset($invInfo['invColor'])){echo "value='$invInfo[invColor]'";}?> required></label>
                     <input class="formButton" type="submit" name="submit" value="Update Vehicle">
